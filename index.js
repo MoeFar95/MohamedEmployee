@@ -13,7 +13,7 @@ const sequelize = new Sequelize(
   process.env.DB_USER,
   process.env.DB_PASSWORD,
   {
-    host: "localhost",
+    host: "localhost 2",
     dialect: "mysql",
     port: 3306,
   }
@@ -26,7 +26,7 @@ let managers;
 let employees;
 
 var connection = mysql.createConnection({
-  host: "localhost",
+  host: "localhost 2",
 
   // Your port; if not 3306
   port: 3306,
@@ -36,7 +36,7 @@ var connection = mysql.createConnection({
 
   // Your password
   password: process.env.DB_PASSWORD,
-  database: "employees_db",
+  database: "employee_db",
 });
 
 figlet("Employee Tracker", (err, result) => {
